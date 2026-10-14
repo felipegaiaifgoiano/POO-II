@@ -1,0 +1,21 @@
+VS Code
+
+Compilar Código
+
+1. Procure Java Projects
+2. Dentro do projeto procure Referenced Libraries
+3. Clique no +
+4. Procure a pasta onde se encontram os .jar (pasta lib do JavaFX)
+5. Adicione todos os .jar
+
+Executar o código
+
+1. Abra o arquivo launch.json que está dentro da pasta .vscode da raiz do projeto
+2. Em cada Configuration que utilizar para executar, insira a linha abaixo após request:
+
+	Para MacOS ou Linux:
+    "vmArgs": "--module-path /Users/felipenunesgaia/javafx-sdk-27/lib --add-modules javafx.controls,javafx.fxml,javafx.web",
+        
+        
+    Para Windows:
+    "vmArgs": "--module-path \"C:/Users/felipenunesgaia/javafx-sdk-27/lib\" --add-modules javafx.controls,javafx.fxml,javafx.web",

@@ -1,7 +1,5 @@
 package core.dashboards;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,20 +10,13 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class Graficos extends Application {
-    static Logger logger = Logger.getLogger("graficos");
-
-    private static void threadLogger(String message) {
-        logger.log(Level.INFO, message + " | Executando na Thread: " + Thread.currentThread().getName());
-    }
 
     public static void main(String[] args) {
-        threadLogger("In main (Graficos)");
         Application.launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) {
-        threadLogger("In start (Graficos)");
 
         // 1. Definição dos eixos para os gráficos lineares
         CategoryAxis xAxisBarra = new CategoryAxis();
